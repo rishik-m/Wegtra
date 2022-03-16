@@ -16,8 +16,7 @@ const index = () => (
                 <div className="icon"><i className="fa fa-cogs" /></div>
                 <p className="title">Service One</p>
                 <p className="text">
-                    Click to see or edit your profile page,
-                    Lorem ipsum dolor sit.
+                    Click to see or edit your profile page.
                     <button type="button" className="btn btn-xs btn-dark">Know More</button>
                 </p>
             </div>
@@ -46,20 +45,27 @@ const index = () => (
                 <p className="title">Service Five</p>
                 <p className="text">Add or change your contacts and links.</p>
             </div>
-            <div className="card">
-                <div className="icon"><i className="fa fa-cogs" /></div>
-                <p className="title">Service Five</p>
-                <p className="text">Add or change your contacts and links.</p>
-            </div>
-            <div className="card">
-                <div className="icon"><i className="fa fa-cogs" /></div>
-                <p className="title">Service Five</p>
-                <p className="text">Add or change your contacts and links.</p>
-            </div>
-            <div className="card">
-                <div className="icon"><i className="fa fa-cogs" /></div>
-                <p className="title">Service Five</p>
-                <p className="text">Add or change your contacts and links.</p>
+        </div>
+        <div className="about-section">
+            <div className="inner-container">
+                <h1>Why Us?</h1>
+                <p className="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus velit ducimus, enim inventore earum, eligendi
+                    nostrum pariatur necessitatibus eius dicta a voluptates
+                    sit deleniti autem error eos totam nisi neque voluptates
+                    sit deleniti autem error eos totam nisi neque.
+                </p>
+                <div className="skills">
+                    <span>24/7 Suppot</span>
+                    <span>All India Delivery</span>
+                    <span>RTO Service</span>
+                </div>
+                <br />
+                <button type="button" className="custom-btn btn-12">
+                    <span>Click!</span>
+                    <span>Read More</span>
+                </button>
             </div>
         </div>
     </div>
