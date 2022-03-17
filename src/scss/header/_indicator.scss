@@ -1,11 +1,10 @@
 /*
 // .indicator
 */
-@import '../variables';
-@import '../mixins/direction';
-@import '../mixins/scheme';
-@import '../mixins/header';
-
+@import "../variables";
+@import "../mixins/direction";
+@import "../mixins/scheme";
+@import "../mixins/header";
 
 @mixin local-define-scheme($scheme) {
     .indicator__icon {
@@ -26,9 +25,8 @@
     }
 }
 
-
 @include desktop-header-variant-selector {
-    $local-open-transition-duration: .2s;
+    $local-open-transition-duration: 0.2s;
 
     .indicator {
         position: relative;
@@ -89,12 +87,12 @@
         &:before {
             display: block;
             position: absolute;
-            content: '';
+            content: "";
             top: 0;
             bottom: 0;
             z-index: -1;
             border-radius: 2.5px;
-
+            background-color: black;
             @include direction {
                 #{$inset-inline-start}: 0;
                 #{$inset-inline-end}: 0;
@@ -131,8 +129,7 @@
         transform-origin: top;
         transform: rotateX(60deg);
         opacity: 0;
-        transition:
-            transform $local-open-transition-duration,
+        transition: transform $local-open-transition-duration,
             opacity $local-open-transition-duration,
             visibility 0s $local-open-transition-duration;
 
@@ -141,12 +138,10 @@
         }
     }
 
-
     /*
     // .indicator--trigger--click.indicator--open,
     // .indicator--trigger--hover:hover
     */
-
 
     .indicator--trigger--click.indicator--open,
     .indicator--trigger--hover:hover {
@@ -159,7 +154,6 @@
             transform: rotateX(0deg);
         }
     }
-
 
     .indicator--mobile {
         .indicator__button {
@@ -187,14 +181,17 @@
         }
     }
 
-
     // define scheme
     @include local-define-scheme($header-scheme);
 
     .indicator__counter {
         color: map_get($indicator-counter-scheme, opposite);
 
-        @include scheme-font-weight($indicator-counter-scheme, opposite, $font-weight-medium);
+        @include scheme-font-weight(
+            $indicator-counter-scheme,
+            opposite,
+            $font-weight-medium
+        );
 
         &:before {
             background-color: map_get($indicator-counter-scheme, main);

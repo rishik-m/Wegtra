@@ -35,12 +35,12 @@ function Topbar(props: Props) {
                     </div>
                     <div className="topbar__item-text">
                         <AppLink href={url.pageTerms()} className="topbar__link">
-                            <FormattedMessage id="LINK_ABOUT_US" />
+                            <FormattedMessage id="INPUT_TERMS_AGREE_LABEL_LINK" />
                         </AppLink>
                     </div>
                     <div className="topbar__item-text">
                         <AppLink href={url.pageContactUs()} className="topbar__link">
-                            <FormattedMessage id="LINK_CONTACTS" />
+                            <FormattedMessage id="TEXT_SHOP_FEATURE_SUPPORT_TITLE" />
                         </AppLink>
                     </div>
                 </React.Fragment>
@@ -48,28 +48,18 @@ function Topbar(props: Props) {
             {layout === 'classic' && (
                 <React.Fragment>
                     <div className="topbar__item-text">
-                        <AppLink href={url.pageAboutUs()} className="topbar__link">
-                            <FormattedMessage id="LINK_ABOUT_US" />
-                        </AppLink>
-                    </div>
-                    <div className="topbar__item-text">
-                        <AppLink href={url.pageContactUs()} className="topbar__link">
-                            <FormattedMessage id="LINK_CONTACTS" />
-                        </AppLink>
-                    </div>
-                    <div className="topbar__item-text">
-                        <AppLink href={url.pageStoreLocation()} className="topbar__link">
-                            <FormattedMessage id="LINK_STORE_LOCATION" />
-                        </AppLink>
-                    </div>
-                    <div className="topbar__item-text">
                         <AppLink href={url.trackOrder()} className="topbar__link">
                             <FormattedMessage id="LINK_TRACK_ORDER" />
                         </AppLink>
                     </div>
                     <div className="topbar__item-text">
-                        <AppLink href={url.blog()} className="topbar__link">
-                            <FormattedMessage id="LINK_BLOG" />
+                        <AppLink href={url.pageTerms()} className="topbar__link">
+                            <FormattedMessage id="INPUT_TERMS_AGREE_LABEL_LINK" />
+                        </AppLink>
+                    </div>
+                    <div className="topbar__item-text">
+                        <AppLink href={url.pageContactUs()} className="topbar__link">
+                            <FormattedMessage id="TEXT_SHOP_FEATURE_SUPPORT_TITLE" />
                         </AppLink>
                     </div>
                     <div className="topbar__item-spring" />

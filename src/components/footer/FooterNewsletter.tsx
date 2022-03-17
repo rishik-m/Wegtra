@@ -5,7 +5,6 @@ import { FormattedMessage, useIntl } from 'react-intl';
 // application
 import AppLink from '~/components/shared/AppLink';
 // data
-import theme from '~/data/theme';
 
 const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = () => {
     const intl = useIntl();
@@ -15,21 +14,18 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
     };
 
     const socialLinks = [
-        { type: 'facebook', url: theme.author.profile_url, icon: 'fab fa-facebook-f' },
-        { type: 'twitter', url: theme.author.profile_url, icon: 'fab fa-twitter' },
-        { type: 'youtube', url: theme.author.profile_url, icon: 'fab fa-youtube' },
-        { type: 'instagram', url: theme.author.profile_url, icon: 'fab fa-instagram' },
-        { type: 'rss', url: theme.author.profile_url, icon: 'fas fa-rss' },
+        { type: 'facebook', icon: 'fab fa-facebook-f' },
+        { type: 'twitter', icon: 'fab fa-twitter' },
+        { type: 'youtube', icon: 'fab fa-youtube' },
+        { type: 'instagram', icon: 'fab fa-instagram' },
+        { type: 'rss', icon: 'fas fa-rss' },
     ];
 
     return (
         <div className="footer-newsletter">
             <h5 className="footer-newsletter__title">
-                <FormattedMessage id="HEADER_NEWSLETTER" />
+                <FormattedMessage id="HEADER_ACCOUNT" />
             </h5>
-            <div className="footer-newsletter__text">
-                <FormattedMessage id="TEXT_NEWSLETTER_MESSAGE" />
-            </div>
 
             <form className="footer-newsletter__form" onSubmit={handleFormSubmit}>
                 <label className="sr-only" htmlFor="footer-newsletter-address">
@@ -57,7 +53,7 @@ const FooterNewsletter: FunctionComponent<React.HTMLAttributes<HTMLElement>> = (
                 <ul className="social-links__list">
                     {socialLinks.map((link, index) => (
                         <li key={index} className={`social-links__item social-links__item--${link.type}`}>
-                            <AppLink href={link.url} target="_blank">
+                            <AppLink target="_blank">
                                 <i className={link.icon} />
                             </AppLink>
                         </li>

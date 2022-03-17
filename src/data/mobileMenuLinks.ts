@@ -163,7 +163,7 @@ const dataMobileMenuLinks: IMobileMenuLink[] = [
     },
     {
         title: 'Pages',
-        url: '/about-us',
+        url: '/terms',
         submenu: [
             { title: 'About Us', url: '/about-us' },
             { title: 'Contact Us v1', url: '/demo/site/contact-us-v1' },
