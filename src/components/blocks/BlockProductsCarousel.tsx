@@ -105,7 +105,7 @@ const slickSettings: Record<IBlockProductsCarouselLayout, ISlickProps> = {
         dots: false,
         arrows: false,
         infinite: true,
-        speed: 400,
+        speed: 3000,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [

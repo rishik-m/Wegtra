@@ -6,10 +6,10 @@ const theme = {
         profile_url: 'https://themeforest.net/user/kos9',
     },
     contacts: {
-        address: ['715 Fake Street, New York 10021 USA'],
-        email: ['red-parts@example.com'],
+        address: ['715 Yellow lane, USA'],
+        email: ['abc@example.com'],
         phone: ['+1 (800) 060-07-30'],
-        hours: ['Mon-Sat 10:00pm - 7:00pm'],
+        hours: ['Mon-Sat 10:00am - 7:00pm'],
     },
 };
 

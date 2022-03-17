@@ -4,7 +4,6 @@ import React, { useMemo, useRef } from 'react';
 import { FormattedMessage } from 'react-intl';
 // application
 import AccountMenu from '~/components/header/AccountMenu';
-import AppLink from '~/components/shared/AppLink';
 import CurrencyFormat from '~/components/shared/CurrencyFormat';
 import Departments from '~/components/header/Departments';
 import Dropcart from '~/components/header/Dropcart';
@@ -71,16 +70,6 @@ function Header() {
                 <div className=" header__navbar-menu">
                     <MainMenu />
                 </div>
-                {desktopLayout === 'classic' && (
-                    <div className="header__navbar-phone phone">
-                        <AppLink href={url.pageContactUs()} className="phone__body">
-                            <div className="phone__title">
-                                <FormattedMessage id="TEXT_CALL_US" />
-                            </div>
-                            <div className="phone__number">800 060-0730</div>
-                        </AppLink>
-                    </div>
-                )}
             </div>
             <Logo className="header__logo" />
             <div className="header__search">
