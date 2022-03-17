@@ -1,4 +1,6 @@
 import React from 'react';
+import Testimonial from '~/components/testimonial';
+import Fquestions from '~/components/fquestions';
 
 const index = () => (
     <div>
@@ -68,6 +70,8 @@ const index = () => (
                 </button>
             </div>
         </div>
+        <Fquestions />
+        <Testimonial />
     </div>
 );
 

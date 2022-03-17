@@ -34,6 +34,7 @@ $local-transition-duration: 0.15s;
     flex-wrap: wrap;
     border: 1px solid $block-brands-divider;
 }
+
 .block-brands__item {
     text-align: center;
     flex-shrink: 0;
@@ -41,6 +42,7 @@ $local-transition-duration: 0.15s;
     align-items: center;
     justify-content: center;
 }
+
 .block-brands__item-link {
     position: relative;
     display: block;
@@ -137,7 +139,7 @@ $local-transition-duration: 0.15s;
     FAQ
 */
 // Logo scroll
-$animationSpeed: 40s;
+$animationSpeed: 50s;
 
 @keyframes scroll {
     0% {
@@ -154,7 +156,7 @@ $animationSpeed: 40s;
     overflow: hidden;
     position: relative;
     width: auto;
-    background-color: #171717;
+    background-color: #383838;
 
     .slide-track {
         animation: scroll $animationSpeed linear infinite;

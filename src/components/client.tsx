@@ -3,13 +3,6 @@ import React from 'react';
 const Client = () => (
     <div className="block block-brands block-brands--layout--columns-8-full">
         <div className="container">
-            <div className="col-md-12">
-                <div className="site-heading text-center">
-                    <h2>
-                        Our Clients
-                    </h2>
-                </div>
-            </div>
             <ul className="block-brands__list">
                 {
                     /* {brands.map((brand, brandIdx) => (

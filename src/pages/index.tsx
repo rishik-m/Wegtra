@@ -126,9 +126,22 @@ function Page() {
             <BlockSpace layout="divider-xs" />
             <BlockSlideshow slides={slides} />
             <BlockSpace layout="divider-nl" />
-            <div className="block-categories__title"> Our Services </div>
+            <div className="col-md-12">
+                <div className="site-heading text-center">
+                    <h2>
+                        Our Services
+                    </h2>
+                </div>
+            </div>
             <Card />
             <BlockSpace layout="divider-nl" />
+            <div className="col-md-12">
+                <div className="site-heading text-center">
+                    <h2>
+                        Our Clients
+                    </h2>
+                </div>
+            </div>
             <Client />
             <BlockCategories
                 blockTitle={intl.formatMessage({ id: 'HEADER_POPULAR_CATEGORIES' })}
