@@ -3,6 +3,13 @@ import React from 'react';
 
 const Testimonial = () => (
     <React.Fragment>
+        <div className="col-md-12">
+            <div className="site-heading text-center">
+                <h2>
+                    Testimonials
+                </h2>
+            </div>
+        </div>
         <div className="outerdiv">
             <div className="innerdiv">
                 <div className="div1 eachdiv">
