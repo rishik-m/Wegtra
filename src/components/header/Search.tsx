@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // react
 import React, { useRef, useState } from 'react';
@@ -370,7 +371,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                             <div className="vehicles-list">
                                 <div className="vehicles-list__body">
                                     {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                                    <label className="vehicles-list__item">
+                                    <label className="vehicles-list__item" htmlFor="test">
                                         <svg
                                             version="1.0"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -410,9 +411,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                             </g>
                                         </svg>
                                         <span>
-                                            <span>
-                                                <FormattedMessage id="TEXT_ALL_VEHICLES" />
-                                            </span>
+                                            <FormattedMessage id="TEXT_ALL_VEHICLES" />
                                         </span>
                                     </label>
                                     <label className="vehicles-list__item">
@@ -455,11 +454,10 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                             </g>
                                         </svg>
                                         <span>
-                                            <span>
-                                                <FormattedMessage id="TEXT_VEHICLE_ENGINE" />
-                                            </span>
+                                            <FormattedMessage id="TEXT_VEHICLE_ENGINE" />
                                         </span>
                                     </label>
+
                                     <label className="vehicles-list__item">
                                         <svg
                                             version="1.0"
