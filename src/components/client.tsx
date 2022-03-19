@@ -20,43 +20,64 @@ const Client = () => (
                 <div className="slider__container">
                     <div className="slide-track">
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" height="120" width="120" alt="" />
                         </div>
                         <div className="slide">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="170" width="400" alt="" />
+                            <img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" height="120" width="120" alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" height="120" width="120" alt="" />
                         </div>
                     </div>
                 </div>

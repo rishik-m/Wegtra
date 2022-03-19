@@ -32,6 +32,7 @@ import '../scss/style.mobile-header-variant-two.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../scss/blocks/_client-block.scss';
 import '../scss/services/_index.scss';
+import '../scss/cards/_cards.scss';
 
 interface Props extends AppProps {
     languageInitialProps: ILanguageProviderProps;
