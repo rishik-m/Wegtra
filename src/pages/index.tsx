@@ -185,7 +185,6 @@ function Page() {
                     <Rproducts />
                 </div>
             </div>
-            <div className="block-categories__title"> Testimonials </div>
             <Testimonial />
             <BlockFeatures layout="bottom-strip" />
         </React.Fragment>
