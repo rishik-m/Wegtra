@@ -15,6 +15,15 @@ import FooterNewsletter from '~/components/footer/FooterNewsletter';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import theme from '~/data/theme';
 
+const ColoredLine = () => (
+    <hr
+        style={{
+            color: 'red',
+            backgroundColor: 'white',
+        }}
+    />
+);
+
 export function Footer() {
     return (
         <div className="site-footer">
@@ -57,6 +66,192 @@ export function Footer() {
                         </div>
                         <div className="col-12 col-md-6 col-xl-4">
                             <FooterNewsletter className="site-footer__widget" />
+                        </div>
+                    </div>
+                </div>
+                <ColoredLine />
+                <div className="row">
+                    <div className=" col-md-2">
+                        <h3 style={{ color: 'white' }}> Bangalore </h3>
+                        <div className="mt-3">
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <h3 style={{ color: 'white' }}> Delhi </h3>
+                        <div className="mt-3">
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <h3 style={{ color: 'white' }}> Chennai </h3>
+                        <div className="mt-3">
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <h3 style={{ color: 'white' }}> Hyderabad </h3>
+                        <div className="mt-3">
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <h3 style={{ color: 'white' }}> Noida </h3>
+                        <div className="mt-3">
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <h3 style={{ color: 'white' }}> Pune </h3>
+                        <div className="mt-3">
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                            {' '}
+                            <br />
+                            <a href="/" className="color-white border-0" style={{ fontSize: '13px', color: 'gray', border: '0' }}> Demo Text </a>
+                        </div>
+                    </div>
+                </div>
+                <ColoredLine />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-xl-8">
+                            <p className="flex-start" style={{ color: 'white' }}> © 2022 AgumentikSoftware. All Rights Reserved by  </p>
+                        </div>
+                        <div className="col-12 col-xl-4">
+                            <p className="flex-start" style={{ color: 'white' }}>
+                                {' '}
+                                <a href="/terms" style={{ color: 'white' }}>
+                                    {' '}
+                                    Terms & Conditions |
+                                    {' '}
+                                    <a href="/faq" style={{ color: 'white' }}> Privacy Policy </a>
+                                    {' '}
+                                </a>
+                                {' '}
+                            </p>
                         </div>
                     </div>
                 </div>

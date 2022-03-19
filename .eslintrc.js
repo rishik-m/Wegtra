@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 module.exports = {
     env: {
         browser: true,
@@ -26,6 +27,12 @@ module.exports = {
         },
     },
     rules: {
+        'jsx-a11y/label-has-for': 0,
+        'jsx-a11y/label-has-associated-control': ['error', {
+            required: {
+                some: ['nesting', 'id'],
+            },
+        }],
         indent: ['error', 4],
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
