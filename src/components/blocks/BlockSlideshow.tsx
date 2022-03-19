@@ -67,7 +67,10 @@ function BlockSlideshow(props: Props) {
                                     className="block-slideshow__item-details"
                                     dangerouslySetInnerHTML={{ __html: slide.details }}
                                 />
-                                <span className="block-slideshow__item-button">{slide.buttonLabel}</span>
+                                <button type="button" className="custom-btn btn-12">
+                                    <span>Click!</span>
+                                    <span>{slide.buttonLabel}</span>
+                                </button>
                             </AppLink>
                         ))}
                     </AppSlick>
