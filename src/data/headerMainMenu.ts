@@ -137,7 +137,7 @@ const dataHeaderMainMenu: IMainMenuLink[] = [
     },
     {
         title: 'Blogs',
-        url: '/blog',
+        url: '/blogs',
     },
     {
         title: 'Contact Us',

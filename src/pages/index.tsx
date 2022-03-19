@@ -21,8 +21,13 @@ import { wrapper } from '~/store/store';
 import Card from '../components/card';
 import Client from '../components/client';
 import Fquestions from '../components/fquestions';
-import Rproducts from '../components/rproducts';
 import Testimonial from '../components/testimonial';
+import { IProduct } from '~/interfaces/product';
+
+export interface IBlockProductsColumnsItem {
+    title: string;
+    products: IProduct[];
+}
 
 export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
     const dispatch = store.dispatch as AppDispatch;
@@ -104,19 +109,12 @@ function Page() {
     /**
      * Product columns.
      */
-    const columns = useProductColumns(
+
+    const columnsf = useProductColumns(
         useMemo(() => [
             {
-                title: 'Top Rated Products',
-                source: () => shopApi.getTopRatedProducts(null, 3),
-            },
-            {
                 title: 'Special Offers',
-                source: () => shopApi.getSpecialOffers(3),
-            },
-            {
-                title: 'Bestsellers',
-                source: () => shopApi.getPopularProducts(null, 3),
+                source: () => shopApi.getTopRatedProducts(null, 3),
             },
         ], []),
     );
@@ -135,6 +133,9 @@ function Page() {
                 blockTitle={intl.formatMessage({ id: 'HEADER_POPULAR_CATEGORIES' })}
                 categories={popularCategories.data}
             />
+            <BlockSpace layout="divider-nl" />
+            <div className="block-categories__title"> Offers-Services </div>
+            <BlockBanners />
             <BlockSpace layout="divider-nl" />
             <BlockProductsCarousel
                 blockTitle={intl.formatMessage({ id: 'HEADER_FEATURED_PRODUCTS' })}
@@ -161,7 +162,6 @@ function Page() {
                 links={latestPostsLinks}
             />
             <BlockSpace layout="divider-nl" className="d-xl-block d-none" />
-            <BlockProductsColumns columns={columns} />
             <BlockSpace layout="divider-nl" />
             <div className="row">
                 <div className="col-md-8">
@@ -169,8 +169,7 @@ function Page() {
                     <Fquestions />
                 </div>
                 <div className="col-md-4">
-                    <div className="block-categories__title"> Top Rated Products </div>
-                    <Rproducts />
+                    <BlockProductsColumns columns={columnsf} />
                 </div>
             </div>
             <div className="block-categories__title"> Testimonials </div>

@@ -1,32 +1,32 @@
-@import '../variables';
-@import '../svg';
-@import '../mixins/direction';
-@import '../mixins/scheme';
-@import '../mixins/header';
-
+@import "../variables";
+@import "../svg";
+@import "../mixins/direction";
+@import "../mixins/scheme";
+@import "../mixins/header";
 
 @mixin local-define-button-scheme($state) {
-    $bg-color-key:    #{$state}-bg-color;
-    $font-color-key:  #{$state}-font-color;
-    $icon-color-key:  #{$state}-icon-color;
+    $bg-color-key: #{$state}-bg-color;
+    $font-color-key: #{$state}-font-color;
+    $icon-color-key: #{$state}-icon-color;
     $arrow-color-key: #{$state}-arrow-color;
 
-    @if(map_has_key($search-classic-button-scheme, $bg-color-key)) {
+    @if (map_has_key($search-classic-button-scheme, $bg-color-key)) {
         background-color: map_get($search-classic-button-scheme, $bg-color-key);
     }
-    @if(map_has_key($search-classic-button-scheme, $font-color-key)) {
+    @if (map_has_key($search-classic-button-scheme, $font-color-key)) {
         color: map_get($search-classic-button-scheme, $font-color-key);
     }
-    @if(map_has_key($search-classic-button-scheme, $icon-color-key)) {
+    @if (map_has_key($search-classic-button-scheme, $icon-color-key)) {
         .search__button-icon {
             fill: map_get($search-classic-button-scheme, $icon-color-key);
         }
     }
-    @if(map_has_key($search-classic-button-scheme, $arrow-color-key)) {
-        background-image: url(svg-select-arrow(map_get($search-classic-button-scheme, $arrow-color-key)));
+    @if (map_has_key($search-classic-button-scheme, $arrow-color-key)) {
+        background-image: url(svg-select-arrow(
+            map_get($search-classic-button-scheme, $arrow-color-key)
+        ));
     }
 }
-
 
 @include desktop-header-variant-selector {
     @if ($header-layout == classic) {
@@ -34,7 +34,6 @@
         $local-border-radius: 2.5px;
         $local-input-border-width: 1px;
         $local-gutter: 5px;
-
 
         .search__body {
             display: flex;
@@ -73,6 +72,7 @@
             font-weight: $font-weight-medium;
             line-height: 1;
             margin-top: 1px;
+            margin-left: -7px !important;
 
             @include direction {
                 #{$margin-inline-start}: 9px;
@@ -88,21 +88,25 @@
             border-width: $local-input-border-width;
             border-style: solid;
             border-radius: $local-border-radius;
-            transition:
-                background-color .2s,
-                border-color .2s,
-                color .2s;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 
             @include direction {
                 #{$padding-inline-start}: 14px - $local-input-border-width;
-                #{$padding-inline-end}: $local-height - $local-input-border-width;
+                #{$padding-inline-end}: $local-height -
+                    $local-input-border-width;
             }
 
             &:hover {
-                @include define-input-scheme($search-classic-input-scheme, hover);
+                @include define-input-scheme(
+                    $search-classic-input-scheme,
+                    hover
+                );
             }
             &:focus {
-                @include define-input-scheme($search-classic-input-scheme, focus);
+                @include define-input-scheme(
+                    $search-classic-input-scheme,
+                    focus
+                );
             }
         }
         .search__button--start {
@@ -116,15 +120,15 @@
             background-repeat: no-repeat;
             background-size: 5px 10px;
             border-radius: $local-border-radius;
-            transition:
-                color .15s,
-                background-color .15s;
+            transition: color 0.15s, background-color 0.15s;
 
             @include local-define-button-scheme(normal);
 
             @include direction {
                 #{$padding-inline-start}: $local-padding-x;
-                #{$padding-inline-end}: ($local-padding-x + $local-arrow-width + 5px);
+                #{$padding-inline-end}: (
+                    $local-padding-x + $local-arrow-width + 5px
+                );
                 #{$margin-inline-end}: $local-gutter;
                 background-position: $inline-end $local-padding-x center;
             }
@@ -139,7 +143,7 @@
             }
         }
         .search__button--end {
-            transition: color .2s;
+            transition: color 0.2s;
             position: absolute;
             height: $local-height;
             width: $local-height;
@@ -149,19 +153,27 @@
                 #{$inset-inline-end}: 0;
             }
 
-            @if(map_has_key($search-classic-input-scheme, normal-icon-scheme)) {
-                @include define-button-scheme(map_get($search-classic-input-scheme, normal-icon-scheme));
+            @if (
+                map_has_key($search-classic-input-scheme, normal-icon-scheme)
+            ) {
+                @include define-button-scheme(
+                    map_get($search-classic-input-scheme, normal-icon-scheme)
+                );
             }
         }
 
-        @if(map_has_key($search-classic-input-scheme, hover-icon-scheme)) {
+        @if (map_has_key($search-classic-input-scheme, hover-icon-scheme)) {
             .search__input:hover ~ .search__button--end {
-                @include define-button-scheme(map_get($search-classic-input-scheme, hover-icon-scheme));
+                @include define-button-scheme(
+                    map_get($search-classic-input-scheme, hover-icon-scheme)
+                );
             }
         }
-        @if(map_has_key($search-classic-input-scheme, focus-icon-scheme)) {
+        @if (map_has_key($search-classic-input-scheme, focus-icon-scheme)) {
             .search__input:focus ~ .search__button--end {
-                @include define-button-scheme(map_get($search-classic-input-scheme, focus-icon-scheme));
+                @include define-button-scheme(
+                    map_get($search-classic-input-scheme, focus-icon-scheme)
+                );
             }
         }
 
@@ -183,7 +195,7 @@
             &:before {
                 position: absolute;
                 display: block;
-                content: '';
+                content: "";
                 width: $local-size;
                 height: $local-size;
                 top: 100%;
@@ -194,37 +206,52 @@
                 @include direction {
                     #{$inset-inline-start}: 50%;
                     #{$margin-inline-start}: -($local-size / 2);
-                    transform: rotate(45deg) translateX(#{-.5px * $transform-direction}) translateY(-.5px);
+                    transform: rotate(45deg)
+                        translateX(#{-0.5px * $transform-direction})
+                        translateY(-0.5px);
                 }
             }
         }
-
 
         // define scheme
         .search__input {
             @include define-input-scheme($search-classic-input-scheme, normal);
 
             &:hover {
-                @include define-input-scheme($search-classic-input-scheme, hover);
+                @include define-input-scheme(
+                    $search-classic-input-scheme,
+                    hover
+                );
             }
             &:focus {
-                @include define-input-scheme($search-classic-input-scheme, focus);
+                @include define-input-scheme(
+                    $search-classic-input-scheme,
+                    focus
+                );
             }
         }
 
         .search__button--end {
-            @if(map_has_key($search-classic-input-scheme, normal-icon-scheme)) {
-                @include define-button-scheme(map_get($search-classic-input-scheme, normal-icon-scheme));
+            @if (
+                map_has_key($search-classic-input-scheme, normal-icon-scheme)
+            ) {
+                @include define-button-scheme(
+                    map_get($search-classic-input-scheme, normal-icon-scheme)
+                );
             }
         }
-        @if(map_has_key($search-classic-input-scheme, hover-icon-scheme)) {
+        @if (map_has_key($search-classic-input-scheme, hover-icon-scheme)) {
             .search__input:hover ~ .search__button--end {
-                @include define-button-scheme(map_get($search-classic-input-scheme, hover-icon-scheme));
+                @include define-button-scheme(
+                    map_get($search-classic-input-scheme, hover-icon-scheme)
+                );
             }
         }
-        @if(map_has_key($search-classic-input-scheme, focus-icon-scheme)) {
+        @if (map_has_key($search-classic-input-scheme, focus-icon-scheme)) {
             .search__input:focus ~ .search__button--end {
-                @include define-button-scheme(map_get($search-classic-input-scheme, focus-icon-scheme));
+                @include define-button-scheme(
+                    map_get($search-classic-input-scheme, focus-icon-scheme)
+                );
             }
         }
     }
