@@ -3,7 +3,6 @@ import React from 'react';
 
 const Card = () => (
     <React.Fragment>
-        <div> Cards </div>
         <div className="cards-list">
 
             <div className="content">
