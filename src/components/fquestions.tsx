@@ -1,107 +1,40 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/button-has-type */
 /* eslint-disable max-len */
 import React from 'react';
+import AccordionWrapper from './accordionwrapper';
+import AccordionItem from './accordionitem';
 
 function Fquestions() {
+    const data = [
+        {
+            title: 'Item 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a consequat nibh. Mauris suscipit arcu at fermentum convallis. Pellentesque consectetur mi in felis maximus posuere.',
+        },
+        {
+            title: 'Item 2',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie tellus a maximus tempus. Duis vel leo iaculis, porttitor erat et, posuere erat. Ut blandit.',
+        },
+        {
+            title: 'Item 3',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia, nibh imperdiet tempus pharetra, arcu risus aliquet arcu, a auctor ex lacus efficitur purus. Morbi.',
+        },
+        {
+            title: 'Item 4',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat lobortis nibh, eu molestie est placerat non. Donec ornare nisl erat, non imperdiet elit porta.',
+        },
+    ];
+
     return (
-        <section>
-            <div className="container">
-                <div className="accordion">
-
-                    <div className="accordion-item" id="question1">
-                        <a className="accordion-link" href="#question1">
-                            How often do you go to beach?
-                            <i
-                                className="icon ion-md-add"
-                                style={{
-                                    width: '2px',
-                                    background: 'brown',
-                                    height: '10px',
-                                    marginRight: '40px',
-                                }}
-                            />
-                            <i
-                                className="icon ion-md-remove"
-                                style={{
-                                    width: '2px',
-                                    background: 'brown',
-                                    height: '10px',
-                                    marginRight: '40px',
-                                }}
-                            />
-                        </a>
-                        <div className="answer">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eaque sequi sunt vo
-                                luptas iure molestiae exercitationem
-                                {' '}
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="accordion-item" id="question2">
-                        <a className="accordion-link" href="#question2">
-                            How often do you go to beach?
-                            <i
-                                className="icon ion-md-add"
-                                style={{
-                                    width: '2px',
-                                    background: 'brown',
-                                    height: '10px',
-                                    marginRight: '40px',
-                                }}
-                            />
-                            <i
-                                className="icon ion-md-remove"
-                                style={{
-                                    width: '2px',
-                                    background: 'brown',
-                                    height: '10px',
-                                    marginRight: '40px',
-                                }}
-                            />
-                        </a>
-                        <div className="answer">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eaque sequi sunt vo
-                                luptas iure molestiae exercitationem
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="accordion-item" id="question3">
-                        <a className="accordion-link" href="#question3">
-                            How often do you go to beach?
-                            <i
-                                className="icon ion-md-add"
-                                style={{
-                                    width: '2px',
-                                    background: 'brown',
-                                    height: '10px',
-                                    marginRight: '40px',
-                                }}
-                            />
-                            <i
-                                className="icon ion-md-remove"
-                                style={{
-                                    width: '2px',
-                                    background: 'brown',
-                                    height: '10px',
-                                    marginRight: '40px',
-                                }}
-                            />
-                        </a>
-                        <div className="answer">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eaque sequi sunt vo
-                                luptas iure molestiae exercitationem
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        <div className="content">
+            <AccordionWrapper>
+                {data.map((item, index) => (
+                    <AccordionItem key={index} index={index} title={item.title} description={item.description} />
+                ))}
+            </AccordionWrapper>
+        </div>
     );
 }
 
