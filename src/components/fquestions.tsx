@@ -25,6 +25,10 @@ function Fquestions() {
             title: 'Item 4',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat lobortis nibh, eu molestie est placerat non. Donec ornare nisl erat, non imperdiet elit porta.',
         },
+        {
+            title: 'Item 4',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat lobortis nibh, eu molestie est placerat non. Donec ornare nisl erat, non imperdiet elit porta.',
+        },
     ];
 
     return (
