@@ -8,13 +8,13 @@ const dataHeaderMainMenu: IMainMenuLink[] = [
     },
     {
         title: 'Services',
-        url: '/catalog/products',
+        url: '/services',
         submenu: {
             type: 'menu',
             links: [
                 {
                     title: 'Service 1',
-                    url: '/',
+                    url: '/services/1',
                 },
                 {
                     title: 'Service 2',
