@@ -1,3 +1,6 @@
+.accordion-wrapper {
+    margin: 50px;
+}
 .accordion-wrapper .accordion-item h3.accordion-title {
     font-size: 1.75rem;
     margin: 0;
@@ -11,11 +14,11 @@
     border-radius: 1rem;
     border: none;
     font-size: 1.2rem;
-    width: 100%;
+    width: 80%;
     text-align: left;
     color: #ffffff;
     font-weight: bold;
-    margin-top: 0.5rem;
+    margin: 0 auto;
     padding: 1rem;
 }
 
@@ -36,7 +39,7 @@
     span.title-wrapper {
     display: block;
     position: relative;
-    width: 100%;
+    width: 80%;
 }
 
 .accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper {
@@ -73,7 +76,7 @@
     box-sizing: border-box;
     padding: 0.5rem 1rem 0 1rem;
     opacity: 0;
-    width: 100%;
+    width: 80%;
     height: 0;
     overflow: hidden;
     transition-timing-function: ease-out;
@@ -88,7 +91,8 @@
     box-sizing: border-box;
     border-radius: 1rem;
     opacity: 1;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     height: auto;
     transition-timing-function: ease-in;
     transition: all 1s;
