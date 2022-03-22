@@ -22,6 +22,7 @@ import Card from '../components/card';
 import Client from '../components/client';
 import Fquestions from '../components/fquestions';
 import Testimonial from '../components/testimonial';
+import BlockCard from '../components/blockcard';
 import { IProduct } from '~/interfaces/product';
 
 export interface IBlockProductsColumnsItem {
@@ -110,14 +111,14 @@ function Page() {
      * Product columns.
      */
 
-    const columnsf = useProductColumns(
-        useMemo(() => [
-            {
-                title: 'Special Offers',
-                source: () => shopApi.getTopRatedProducts(null, 3),
-            },
-        ], []),
-    );
+    // const columnsf = useProductColumns(
+    //     useMemo(() => [
+    //         {
+    //             title: 'Special Offers',
+    //             source: () => shopApi.getSpecialOffers(3),
+    //         },
+    //     ], []),
+    // );
 
     return (
         <React.Fragment>
@@ -141,10 +142,10 @@ function Page() {
                 </div>
             </div>
             <Client />
-            <BlockCategories
-                blockTitle={intl.formatMessage({ id: 'HEADER_POPULAR_CATEGORIES' })}
-                categories={popularCategories.data}
-            />
+            <div className="site-heading text-center">
+                <h2> Popular Categories </h2>
+            </div>
+            <BlockCard />
             <BlockSpace layout="divider-nl" />
             <div className="block-categories__title"> Offers-Services </div>
             <BlockBanners />
@@ -174,14 +175,12 @@ function Page() {
                 links={latestPostsLinks}
             />
             <BlockSpace layout="divider-nl" className="d-xl-block d-none" />
-            <BlockSpace layout="divider-nl" />
-            <div className="row">
-                <div className="col-md-8">
-                    <div className="block-categories__title"> Frequently Asked Questions </div>
-                    <Fquestions />
-                </div>
-                <div className="col-md-4">
-                    <BlockProductsColumns columns={columnsf} />
+            <div className="container">
+                <div style={{ alignItems: 'center' }}>
+                    <div className="row">
+                        <Fquestions />
+                    </div>
+
                 </div>
             </div>
             <Testimonial />

@@ -358,20 +358,33 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                         })}
                     >
                         <div className="vehicle-picker__panel-body">
-                            <div className="vehicle-picker__text">
-                                <FormattedMessage id="TEXT_SELECT_VEHICLE_TO_FIND_EXACT_FIT_PARTS" />
-                            </div>
-
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-md-3">
+                                    <div className="vehicle-picker__text" style={{ marginTop: '20px' }}>
+                                        <FormattedMessage id="TEXT_SELECT_VEHICLE_TO_FIND_EXACT_FIT_PARTS" />
+                                    </div>
+                                </div>
+
+                                <div className="col-md-9">
                                     <TextField fullWidth id="filled-basic" label="Search for a city" variant="filled" />
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="vehicles-list">
-                                <div className="vehicles-list__body">
-                                    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                                    <label className="vehicles-list__item" htmlFor="test">
+                        <div className="container">
+                            <h3 style={{
+                                fontSize: '12px', color: '#888', paddingLeft: '6px', textTransform: 'uppercase',
+                            }}
+                            >
+                                {' '}
+                                Popular Cities
+                            </h3>
+                        </div>
+
+                        <div className="page_wrapper" style={{ maxWidth: '900px' }}>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-3">
                                         <svg
                                             version="1.0"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +392,6 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                             height="40.000000pt"
                                             viewBox="0 0 225.000000 225.000000"
                                             preserveAspectRatio="xMidYMid meet"
-                                            style={{ marginLeft: '-12px' }}
                                         >
 
                                             <g
@@ -410,11 +422,9 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span>
-                                            <FormattedMessage id="TEXT_ALL_VEHICLES" />
-                                        </span>
-                                    </label>
-                                    <label className="vehicles-list__item">
+                                        <span> Bangalore </span>
+                                    </div>
+                                    <div className="col-md-3">
                                         <svg
                                             version="1.0"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -422,7 +432,6 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                             height="40.000000pt"
                                             viewBox="0 0 225.000000 225.000000"
                                             preserveAspectRatio="xMidYMid meet"
-                                            style={{ marginLeft: '-12px' }}
                                         >
 
                                             <g
@@ -453,12 +462,9 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span>
-                                            <FormattedMessage id="TEXT_VEHICLE_ENGINE" />
-                                        </span>
-                                    </label>
-
-                                    <label className="vehicles-list__item">
+                                        <span> Chennai </span>
+                                    </div>
+                                    <div className="col-md-3">
                                         <svg
                                             version="1.0"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -466,7 +472,6 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                             height="40.000000pt"
                                             viewBox="0 0 225.000000 225.000000"
                                             preserveAspectRatio="xMidYMid meet"
-                                            style={{ marginLeft: '-12px' }}
                                         >
 
                                             <g
@@ -497,50 +502,258 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span>
-                                            <span>
-                                                <FormattedMessage id="TEXT_CITY" />
-                                            </span>
-                                        </span>
-                                    </label>
+                                        <span> Pune </span>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <svg
+                                            version="1.0"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="30.000000pt"
+                                            height="40.000000pt"
+                                            viewBox="0 0 225.000000 225.000000"
+                                            preserveAspectRatio="xMidYMid meet"
+                                        >
+
+                                            <g
+                                                transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+                                                fill="#000000"
+                                                stroke="none"
+                                            >
+                                                <path d="M998 1521 c-31 -10 -72 -28 -91 -40 -61 -37 -143 -135 -168 -198 -49
+-128 -28 -334 34 -341 l27 -3 0 108 c0 108 0 110 30 138 l30 29 30 -29 c28
+-26 30 -34 30 -97 0 -61 -2 -68 -20 -68 -17 0 -20 -7 -20 -40 0 -36 3 -40 25
+-40 22 0 25 4 25 35 0 31 3 35 25 35 l25 0 0 123 0 123 70 69 70 69 0 -80 c0
+-78 -1 -81 -35 -114 l-35 -34 0 -118 0 -118 40 0 40 0 0 149 c0 122 3 151 15
+161 14 11 23 7 60 -30 l45 -44 0 -73 0 -73 -30 0 c-29 0 -30 -2 -30 -45 0 -45
+0 -45 35 -45 34 0 35 1 35 40 0 39 1 40 35 40 l35 0 0 100 0 100 65 0 65 0 0
+-134 c0 -74 2 -141 6 -149 8 -22 -88 -120 -154 -155 -77 -41 -178 -58 -252
+-43 -74 15 -150 52 -198 95 -51 46 -66 47 -22 1 77 -80 189 -120 309 -113 108
+7 179 38 254 108 71 67 108 120 83 120 -14 0 -16 20 -16 140 l0 140 -80 0 -80
+0 0 -100 0 -100 -25 0 c-25 0 -25 1 -25 78 l0 78 -48 47 c-35 35 -53 46 -66
+41 -16 -6 -17 0 -14 75 2 44 1 81 -2 81 -3 0 -40 -35 -82 -77 l-77 -78 -3
+-120 c-3 -99 -6 -120 -18 -120 -12 0 -16 16 -18 71 -3 66 -5 73 -37 104 l-35
+34 -40 -39 -40 -39 0 -103 c0 -57 -4 -103 -9 -103 -11 0 -37 77 -46 136 -8 54
+8 143 39 210 71 155 259 255 422 225 212 -39 361 -233 339 -441 -5 -44 -4 -51
+6 -36 17 28 6 170 -19 236 -76 197 -310 306 -514 241z m122 -446 l0 -135 -25
+0 c-24 0 -24 1 -27 108 -3 101 -2 108 21 135 14 15 26 27 28 27 2 0 3 -61 3
+-135z m-200 -95 c0 -20 -5 -30 -15 -30 -10 0 -15 10 -15 30 0 20 5 30 15 30
+10 0 15 -10 15 -30z m330 -5 c0 -28 -4 -35 -20 -35 -16 0 -20 7 -20 35 0 28 4
+35 20 35 16 0 20 -7 20 -35z"
+                                                />
+                                            </g>
+                                        </svg>
+                                        <span> Noida </span>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="vehicle-picker__actions">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary btn-sm"
-                                >
-                                    <FormattedMessage id="BUTTON_ADD_VEHICLE" />
-                                </button>
+                        <div className="page_wrapper" style={{ maxWidth: '900px' }}>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-3">
+                                        <svg
+                                            version="1.0"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="30.000000pt"
+                                            height="40.000000pt"
+                                            viewBox="0 0 225.000000 225.000000"
+                                            preserveAspectRatio="xMidYMid meet"
+                                        >
+
+                                            <g
+                                                transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+                                                fill="#000000"
+                                                stroke="none"
+                                            >
+                                                <path d="M998 1521 c-31 -10 -72 -28 -91 -40 -61 -37 -143 -135 -168 -198 -49
+-128 -28 -334 34 -341 l27 -3 0 108 c0 108 0 110 30 138 l30 29 30 -29 c28
+-26 30 -34 30 -97 0 -61 -2 -68 -20 -68 -17 0 -20 -7 -20 -40 0 -36 3 -40 25
+-40 22 0 25 4 25 35 0 31 3 35 25 35 l25 0 0 123 0 123 70 69 70 69 0 -80 c0
+-78 -1 -81 -35 -114 l-35 -34 0 -118 0 -118 40 0 40 0 0 149 c0 122 3 151 15
+161 14 11 23 7 60 -30 l45 -44 0 -73 0 -73 -30 0 c-29 0 -30 -2 -30 -45 0 -45
+0 -45 35 -45 34 0 35 1 35 40 0 39 1 40 35 40 l35 0 0 100 0 100 65 0 65 0 0
+-134 c0 -74 2 -141 6 -149 8 -22 -88 -120 -154 -155 -77 -41 -178 -58 -252
+-43 -74 15 -150 52 -198 95 -51 46 -66 47 -22 1 77 -80 189 -120 309 -113 108
+7 179 38 254 108 71 67 108 120 83 120 -14 0 -16 20 -16 140 l0 140 -80 0 -80
+0 0 -100 0 -100 -25 0 c-25 0 -25 1 -25 78 l0 78 -48 47 c-35 35 -53 46 -66
+41 -16 -6 -17 0 -14 75 2 44 1 81 -2 81 -3 0 -40 -35 -82 -77 l-77 -78 -3
+-120 c-3 -99 -6 -120 -18 -120 -12 0 -16 16 -18 71 -3 66 -5 73 -37 104 l-35
+34 -40 -39 -40 -39 0 -103 c0 -57 -4 -103 -9 -103 -11 0 -37 77 -46 136 -8 54
+8 143 39 210 71 155 259 255 422 225 212 -39 361 -233 339 -441 -5 -44 -4 -51
+6 -36 17 28 6 170 -19 236 -76 197 -310 306 -514 241z m122 -446 l0 -135 -25
+0 c-24 0 -24 1 -27 108 -3 101 -2 108 21 135 14 15 26 27 28 27 2 0 3 -61 3
+-135z m-200 -95 c0 -20 -5 -30 -15 -30 -10 0 -15 10 -15 30 0 20 5 30 15 30
+10 0 15 -10 15 -30z m330 -5 c0 -28 -4 -35 -20 -35 -16 0 -20 7 -20 35 0 28 4
+35 20 35 16 0 20 -7 20 -35z"
+                                                />
+                                            </g>
+                                        </svg>
+                                        <span> Hyderabad </span>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <svg
+                                            version="1.0"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="30.000000pt"
+                                            height="40.000000pt"
+                                            viewBox="0 0 225.000000 225.000000"
+                                            preserveAspectRatio="xMidYMid meet"
+                                        >
+
+                                            <g
+                                                transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+                                                fill="#000000"
+                                                stroke="none"
+                                            >
+                                                <path d="M998 1521 c-31 -10 -72 -28 -91 -40 -61 -37 -143 -135 -168 -198 -49
+-128 -28 -334 34 -341 l27 -3 0 108 c0 108 0 110 30 138 l30 29 30 -29 c28
+-26 30 -34 30 -97 0 -61 -2 -68 -20 -68 -17 0 -20 -7 -20 -40 0 -36 3 -40 25
+-40 22 0 25 4 25 35 0 31 3 35 25 35 l25 0 0 123 0 123 70 69 70 69 0 -80 c0
+-78 -1 -81 -35 -114 l-35 -34 0 -118 0 -118 40 0 40 0 0 149 c0 122 3 151 15
+161 14 11 23 7 60 -30 l45 -44 0 -73 0 -73 -30 0 c-29 0 -30 -2 -30 -45 0 -45
+0 -45 35 -45 34 0 35 1 35 40 0 39 1 40 35 40 l35 0 0 100 0 100 65 0 65 0 0
+-134 c0 -74 2 -141 6 -149 8 -22 -88 -120 -154 -155 -77 -41 -178 -58 -252
+-43 -74 15 -150 52 -198 95 -51 46 -66 47 -22 1 77 -80 189 -120 309 -113 108
+7 179 38 254 108 71 67 108 120 83 120 -14 0 -16 20 -16 140 l0 140 -80 0 -80
+0 0 -100 0 -100 -25 0 c-25 0 -25 1 -25 78 l0 78 -48 47 c-35 35 -53 46 -66
+41 -16 -6 -17 0 -14 75 2 44 1 81 -2 81 -3 0 -40 -35 -82 -77 l-77 -78 -3
+-120 c-3 -99 -6 -120 -18 -120 -12 0 -16 16 -18 71 -3 66 -5 73 -37 104 l-35
+34 -40 -39 -40 -39 0 -103 c0 -57 -4 -103 -9 -103 -11 0 -37 77 -46 136 -8 54
+8 143 39 210 71 155 259 255 422 225 212 -39 361 -233 339 -441 -5 -44 -4 -51
+6 -36 17 28 6 170 -19 236 -76 197 -310 306 -514 241z m122 -446 l0 -135 -25
+0 c-24 0 -24 1 -27 108 -3 101 -2 108 21 135 14 15 26 27 28 27 2 0 3 -61 3
+-135z m-200 -95 c0 -20 -5 -30 -15 -30 -10 0 -15 10 -15 30 0 20 5 30 15 30
+10 0 15 -10 15 -30z m330 -5 c0 -28 -4 -35 -20 -35 -16 0 -20 7 -20 35 0 28 4
+35 20 35 16 0 20 -7 20 -35z"
+                                                />
+                                            </g>
+                                        </svg>
+                                        <span> Lucknow </span>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <svg
+                                            version="1.0"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="30.000000pt"
+                                            height="40.000000pt"
+                                            viewBox="0 0 225.000000 225.000000"
+                                            preserveAspectRatio="xMidYMid meet"
+                                        >
+
+                                            <g
+                                                transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+                                                fill="#000000"
+                                                stroke="none"
+                                            >
+                                                <path d="M998 1521 c-31 -10 -72 -28 -91 -40 -61 -37 -143 -135 -168 -198 -49
+-128 -28 -334 34 -341 l27 -3 0 108 c0 108 0 110 30 138 l30 29 30 -29 c28
+-26 30 -34 30 -97 0 -61 -2 -68 -20 -68 -17 0 -20 -7 -20 -40 0 -36 3 -40 25
+-40 22 0 25 4 25 35 0 31 3 35 25 35 l25 0 0 123 0 123 70 69 70 69 0 -80 c0
+-78 -1 -81 -35 -114 l-35 -34 0 -118 0 -118 40 0 40 0 0 149 c0 122 3 151 15
+161 14 11 23 7 60 -30 l45 -44 0 -73 0 -73 -30 0 c-29 0 -30 -2 -30 -45 0 -45
+0 -45 35 -45 34 0 35 1 35 40 0 39 1 40 35 40 l35 0 0 100 0 100 65 0 65 0 0
+-134 c0 -74 2 -141 6 -149 8 -22 -88 -120 -154 -155 -77 -41 -178 -58 -252
+-43 -74 15 -150 52 -198 95 -51 46 -66 47 -22 1 77 -80 189 -120 309 -113 108
+7 179 38 254 108 71 67 108 120 83 120 -14 0 -16 20 -16 140 l0 140 -80 0 -80
+0 0 -100 0 -100 -25 0 c-25 0 -25 1 -25 78 l0 78 -48 47 c-35 35 -53 46 -66
+41 -16 -6 -17 0 -14 75 2 44 1 81 -2 81 -3 0 -40 -35 -82 -77 l-77 -78 -3
+-120 c-3 -99 -6 -120 -18 -120 -12 0 -16 16 -18 71 -3 66 -5 73 -37 104 l-35
+34 -40 -39 -40 -39 0 -103 c0 -57 -4 -103 -9 -103 -11 0 -37 77 -46 136 -8 54
+8 143 39 210 71 155 259 255 422 225 212 -39 361 -233 339 -441 -5 -44 -4 -51
+6 -36 17 28 6 170 -19 236 -76 197 -310 306 -514 241z m122 -446 l0 -135 -25
+0 c-24 0 -24 1 -27 108 -3 101 -2 108 21 135 14 15 26 27 28 27 2 0 3 -61 3
+-135z m-200 -95 c0 -20 -5 -30 -15 -30 -10 0 -15 10 -15 30 0 20 5 30 15 30
+10 0 15 -10 15 -30z m330 -5 c0 -28 -4 -35 -20 -35 -16 0 -20 7 -20 35 0 28 4
+35 20 35 16 0 20 -7 20 -35z"
+                                                />
+                                            </g>
+                                        </svg>
+                                        <span> Jaipur </span>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <svg
+                                            version="1.0"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="30.000000pt"
+                                            height="40.000000pt"
+                                            viewBox="0 0 225.000000 225.000000"
+                                            preserveAspectRatio="xMidYMid meet"
+                                        >
+
+                                            <g
+                                                transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+                                                fill="#000000"
+                                                stroke="none"
+                                            >
+                                                <path d="M998 1521 c-31 -10 -72 -28 -91 -40 -61 -37 -143 -135 -168 -198 -49
+-128 -28 -334 34 -341 l27 -3 0 108 c0 108 0 110 30 138 l30 29 30 -29 c28
+-26 30 -34 30 -97 0 -61 -2 -68 -20 -68 -17 0 -20 -7 -20 -40 0 -36 3 -40 25
+-40 22 0 25 4 25 35 0 31 3 35 25 35 l25 0 0 123 0 123 70 69 70 69 0 -80 c0
+-78 -1 -81 -35 -114 l-35 -34 0 -118 0 -118 40 0 40 0 0 149 c0 122 3 151 15
+161 14 11 23 7 60 -30 l45 -44 0 -73 0 -73 -30 0 c-29 0 -30 -2 -30 -45 0 -45
+0 -45 35 -45 34 0 35 1 35 40 0 39 1 40 35 40 l35 0 0 100 0 100 65 0 65 0 0
+-134 c0 -74 2 -141 6 -149 8 -22 -88 -120 -154 -155 -77 -41 -178 -58 -252
+-43 -74 15 -150 52 -198 95 -51 46 -66 47 -22 1 77 -80 189 -120 309 -113 108
+7 179 38 254 108 71 67 108 120 83 120 -14 0 -16 20 -16 140 l0 140 -80 0 -80
+0 0 -100 0 -100 -25 0 c-25 0 -25 1 -25 78 l0 78 -48 47 c-35 35 -53 46 -66
+41 -16 -6 -17 0 -14 75 2 44 1 81 -2 81 -3 0 -40 -35 -82 -77 l-77 -78 -3
+-120 c-3 -99 -6 -120 -18 -120 -12 0 -16 16 -18 71 -3 66 -5 73 -37 104 l-35
+34 -40 -39 -40 -39 0 -103 c0 -57 -4 -103 -9 -103 -11 0 -37 77 -46 136 -8 54
+8 143 39 210 71 155 259 255 422 225 212 -39 361 -233 339 -441 -5 -44 -4 -51
+6 -36 17 28 6 170 -19 236 -76 197 -310 306 -514 241z m122 -446 l0 -135 -25
+0 c-24 0 -24 1 -27 108 -3 101 -2 108 21 135 14 15 26 27 28 27 2 0 3 -61 3
+-135z m-200 -95 c0 -20 -5 -30 -15 -30 -10 0 -15 10 -15 30 0 20 5 30 15 30
+10 0 15 -10 15 -30z m330 -5 c0 -28 -4 -35 -20 -35 -16 0 -20 7 -20 35 0 28 4
+35 20 35 16 0 20 -7 20 -35z"
+                                                />
+                                            </g>
+                                        </svg>
+                                        <span> Kochi </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
 
-                    <div
-                        className={classNames('vehicle-picker__panel', {
-                            'vehicle-picker__panel--active': vehiclePanel === 'form' || !hasVehicles,
-                        })}
-                    >
-                        <div className="vehicle-picker__panel-body">
-                            <VehicleForm location="search" onVehicleChange={handleVehicleChange} />
-                            <div className="vehicle-picker__actions">
-                                {hasVehicles && (
-                                    <div className="search__car-selector-link">
-                                        {/* eslint-disable-next-line */}
+                        <div className="vehicle-picker__actions">
+                            <button
+                                type="button"
+                                className="btn btn-primary btn-sm"
+                                style={{
+                                    marginRight: '9px',
+                                    marginBottom: '17px',
+                                }}
+                            >
+                                <FormattedMessage id="BUTTON_ADD_VEHICLE" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    className={classNames('vehicle-picker__panel', {
+                        'vehicle-picker__panel--active': vehiclePanel === 'form' || !hasVehicles,
+                    })}
+                >
+                    <div className="vehicle-picker__panel-body">
+                        <VehicleForm location="search" onVehicleChange={handleVehicleChange} />
+                        <div className="vehicle-picker__actions">
+                            {hasVehicles && (
+                                <div className="search__car-selector-link">
+                                    {/* eslint-disable-next-line */}
                                         <AppLink
                                             anchor
                                             onClick={(event) => {
-                                                event.preventDefault();
+                                            event.preventDefault();
 
-                                                setVehiclePanel('list');
-                                            }}
+                                            setVehiclePanel('list');
+                                        }}
                                         >
                                             <FormattedMessage id="BUTTON_BACK_TO_LIST" />
                                         </AppLink>
-                                    </div>
-                                )}
-                            </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
