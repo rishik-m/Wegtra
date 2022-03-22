@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable react/jsx-indent-props */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // react
@@ -743,8 +745,8 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                 <div className="search__car-selector-link">
                                     {/* eslint-disable-next-line */}
                                         <AppLink
-                                            anchor
-                                            onClick={(event) => {
+                                        anchor
+                                        onClick={(event) => {
                                             event.preventDefault();
 
                                             setVehiclePanel('list');
