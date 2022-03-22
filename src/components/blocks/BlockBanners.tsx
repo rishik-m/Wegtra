@@ -29,7 +29,7 @@ function BlockBanners() {
                                 __html: intl.formatMessage({ id: 'TEXT_BANNER_ONE_SUBTITLE' }),
                             }}
                         />
-                        <span className="block-banners__item-button btn btn-primary btn-sm">
+                        <span className="block-banners__item-button">
                             <FormattedMessage id="TEXT_BANNER_ONE_BUTTON" />
                         </span>
                     </AppLink>

@@ -9,9 +9,9 @@ const dataShopCurrencies: ICurrency[] = [
         rate: 0.92,
     },
     {
-        code: 'GBP',
-        symbol: '£',
-        name: 'Pound Sterling',
+        code: 'INR',
+        symbol: '₹',
+        name: 'Indian National Rupee',
         rate: 0.78,
     },
     {
@@ -20,15 +20,9 @@ const dataShopCurrencies: ICurrency[] = [
         name: 'US Dollar',
         rate: 1,
     },
-    {
-        code: 'RUB',
-        symbol: '₽',
-        name: 'Russian Ruble',
-        rate: 64,
-    },
 ];
 
-const dataShopDefaultCurrencyCode = 'USD';
+const dataShopDefaultCurrencyCode = 'INR';
 
 export const dataShopDefaultCurrency: ICurrency = dataShopCurrencies.find((x) => (
     x.code === dataShopDefaultCurrencyCode

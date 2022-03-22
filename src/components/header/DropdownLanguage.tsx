@@ -17,7 +17,7 @@ function DropdownLanguage() {
     const language = useLanguage();
     const setLocale = useSetLocale();
 
-    const handleItemClick = async (item: Item) => {
+    const handleItemClick = (item: Item) => {
         setLocale(item.language.locale);
     };
 

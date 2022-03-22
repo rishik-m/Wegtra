@@ -1,13 +1,12 @@
 /*
 // .topbar
 */
-@import '../variables';
-@import '../functions';
-@import '../mixins/direction';
-@import '../mixins/breakpoints';
-@import '../mixins/scheme';
-@import '../mixins/header';
-
+@import "../variables";
+@import "../functions";
+@import "../mixins/direction";
+@import "../mixins/breakpoints";
+@import "../mixins/scheme";
+@import "../mixins/header";
 
 @mixin local-define-scheme($scheme) {
     background: map_get($scheme, main);
@@ -18,16 +17,16 @@
         @include scheme-font-weight($scheme, opposite, $font-weight-medium);
     }
     .topbar__link {
-        color: map_get($scheme, muted);
+        color: black;
 
         @include scheme-font-weight($scheme, muted, $font-weight-normal);
 
         &:hover {
-            color: map_get($scheme, opposite);
+            color: #757909;
         }
     }
     .topbar__button-label {
-        color: map_get($scheme, muted);
+        color: black;
 
         @include scheme-font-weight($scheme, muted, $font-weight-normal);
     }
@@ -41,21 +40,20 @@
     }
     .topbar__menu--open .topbar__menu-button,
     .topbar__button:hover {
-        @if(map_has_key($scheme, hover)) {
+        @if (map_has_key($scheme, hover)) {
             background: map_get($scheme, hover);
         }
 
         .topbar__button-label {
-            color: map_get($scheme, opposite);
+            color: #757909;
         }
     }
 }
 
-
 @include desktop-header-variant-selector {
     $local-padding: 8px;
     $local-item-padding-x: 10px;
-    $local-transition-duration: .2s;
+    $local-transition-duration: 0.2s;
 
     .topbar {
         display: flex;
@@ -74,7 +72,7 @@
     }
     // link
     .topbar__link {
-        transition: color .12s;
+        transition: color 0.12s;
     }
     .topbar__link-label {
         transition: inherit;
@@ -88,7 +86,7 @@
         font-family: inherit;
         border: none;
         padding: 0 $local-item-padding-x;
-        transition: background .12s;
+        transition: background 0.12s;
         height: 100%;
 
         &:focus {
@@ -97,7 +95,7 @@
     }
     .topbar__button-title,
     .topbar__button-label {
-        transition: color .12s;
+        transition: color 0.12s;
     }
     .topbar__button-label {
         @include direction {
@@ -134,8 +132,7 @@
         transform-origin: top;
         transform: rotateX(60deg);
         opacity: 0;
-        transition:
-            transform $local-transition-duration,
+        transition: transform $local-transition-duration,
             opacity $local-transition-duration,
             visibility 0s $local-transition-duration;
     }
@@ -145,12 +142,16 @@
         box-shadow: map_get($menu-small-scheme, shadow);
         position: absolute;
         width: 150px;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         font-size: 14px;
         line-height: 26px;
         z-index: 1;
 
-        @include scheme-font-weight($menu-small-scheme, opposite, $font-weight-medium);
+        @include scheme-font-weight(
+            $menu-small-scheme,
+            opposite,
+            $font-weight-medium
+        );
 
         @include direction {
             #{$inset-inline-end}: 0;
@@ -200,7 +201,6 @@
     .topbar--spaceship-end {
         justify-content: flex-end;
     }
-
 
     // define scheme
     @if ($header-layout == spaceship) {

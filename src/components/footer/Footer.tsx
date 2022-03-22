@@ -28,7 +28,7 @@ const WhiteLine = () => (
     <hr
         style={{
             backgroundColor: 'white',
-            marginBottom: '-31px',
+            marginBottom: '-54px',
         }}
     />
 );
@@ -197,16 +197,16 @@ export function Footer() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-xl-8">
-                            <p style={{ color: 'white' }}> © 2022 AgumentikSoftware. All Rights Reserved by  </p>
+                            <p style={{ color: 'white', marginTop: '8px' }}> © 2022 AgumentikSoftware. All Rights Reserved by  </p>
                         </div>
                         <div className="col-12 col-xl-4">
-                            <p style={{ color: 'white' }}>
+                            <p style={{ color: 'white', marginTop: '8px' }}>
                                 {' '}
                                 <a href="/terms" style={{ color: 'white' }}>
                                     {' '}
                                     Terms & Conditions |
                                     {' '}
-                                    <a href="/faq" style={{ color: 'white' }}> Privacy Policy </a>
+                                    <a href="/faq" style={{ color: 'white', marginTop: '8px' }}> Privacy Policy </a>
                                     {' '}
                                 </a>
                                 {' '}
