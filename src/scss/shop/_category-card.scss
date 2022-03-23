@@ -6,8 +6,6 @@
 @import "../mixins/direction";
 @import "../mixins/breakpoints";
 
-.category-card {
-}
 .category-card__body {
     position: relative;
 }
@@ -136,10 +134,10 @@
         &:hover {
             color: white;
 
-            &:before,
-            &:after {
-                // @include size($btn-width);
-            }
+            // &:before,
+            // &:after {
+            //     // @include size($btn-width);
+            // }
 
             &:before {
                 animation: criss-cross-left 0.8s both;
