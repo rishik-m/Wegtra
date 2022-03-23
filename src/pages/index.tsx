@@ -133,7 +133,7 @@ function Page() {
                     </h2>
                 </div>
             </div>
-            <Card />
+            <BlockCard />
             <BlockSpace layout="divider-nl" />
             <div className="col-md-12">
                 <div className="site-heading text-center">
@@ -143,10 +143,10 @@ function Page() {
                 </div>
             </div>
             <Client />
-            <div className="site-heading text-center">
-                <h2> Popular Categories </h2>
-            </div>
-            <BlockCard />
+            <BlockCategories
+                blockTitle={intl.formatMessage({ id: 'HEADER_POPULAR_CATEGORIES' })}
+                categories={popularCategories.data}
+            />
             <BlockSpace layout="divider-nl" />
             <div className="block-categories__title"> Offers-Services </div>
             <BlockBanners />
@@ -176,7 +176,7 @@ function Page() {
                 links={latestPostsLinks}
             />
             <BlockSpace layout="divider-nl" className="d-xl-block d-none" />
-            <div className="container">
+            <div className="container" style={{ maxWidth: 'fit-content' }}>
                 <div style={{ alignItems: 'center' }}>
                     <div className="row">
                         <Fquestions />

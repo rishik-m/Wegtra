@@ -62,7 +62,7 @@ body {
     font-size: 0.875rem;
 }
 .container_faq {
-    width: 90vw;
+    width: 100% !important;
     margin: 5rem auto;
     background: var(--clr-white);
     border-radius: var(--radius);

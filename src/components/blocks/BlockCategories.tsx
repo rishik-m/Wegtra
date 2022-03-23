@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 // react
 import React from 'react';
 // third-party
@@ -50,12 +51,12 @@ function BlockCategories(props: Props) {
                                 ))}
                             </ul>
                             <div className="category-card__actions">
-                                <AppLink
-                                    href={url.category(category)}
+                                <button
+                                    ref={url.category(category)}
                                     className="category-card__link"
                                 >
                                     <FormattedMessage id="LINK_SHOP_ALL" />
-                                </AppLink>
+                                </button>
                             </div>
                         </div>
                     </div>

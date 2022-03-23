@@ -1,20 +1,19 @@
 /*
 // .category-card
 */
-@import '../variables';
-@import '../mixins/card';
-@import '../mixins/direction';
-@import '../mixins/breakpoints';
+@import "../variables";
+@import "../mixins/card";
+@import "../mixins/direction";
+@import "../mixins/breakpoints";
 
-
-.category-card {}
+.category-card {
+}
 .category-card__body {
     position: relative;
 }
 .category-card__overlay-image {
     display: none;
 }
-
 
 .category-card--layout--classic {
     $local-padding-y: 24px;
@@ -52,7 +51,7 @@
     .category-card__name,
     .category-card__children {
         a {
-            transition: color .12s;
+            transition: color 0.12s;
         }
         a:hover {
             color: $link-color;
@@ -87,11 +86,11 @@
             &:before {
                 display: block;
                 position: absolute;
-                content: '';
+                content: "";
                 width: 3px;
                 height: 3px;
                 background: currentColor;
-                opacity: .7;
+                opacity: 0.7;
                 top: 10px;
 
                 @include direction {
@@ -110,80 +109,113 @@
     .category-card__link {
         font-size: 14px;
         font-weight: $font-weight-medium;
-        color: $link-color;
+        color: white;
+        background: black !important;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        &:before {
+            left: -20px;
+            transform: translate(-50%, -50%);
+            // animation: criss-cross-left 0.8s reverse;
+        }
+
+        &:after {
+            right: -20px;
+            transform: translate(50%, -50%);
+            // animation: criss-cross-right 0.8s reverse;
+        }
 
         &:hover {
-            text-decoration: underline;
-        }
-    }
+            color: white;
 
-
-    @include media-breakpoint-only(xl) {
-        .category-card__image {
-            width: 120px;
-            margin: 0 26px;
-        }
-    }
-    @media (max-width: 991px) and (min-width: 475px) {
-        $local-padding-y: 20px;
-
-        .category-card__image {
-            width: 132px;
-            margin: 0 26px;
-            padding: $local-padding-y 0;
-            align-self: center;
-
-        }
-        .category-card__content {
-            flex-direction: column;
-        }
-        .category-card__info {
-            padding-top: 0;
-            padding-bottom: $local-padding-y;
-
-            @include direction {
-                #{$padding-inline-start}: 26px;
-                #{$padding-inline-end}: 26px;
+            &:before,
+            &:after {
+                // @include size($btn-width);
             }
-        }
-    }
-    @media (max-width: 474px) and (min-width: 360px) {
-        .category-card__image {
-            width: 132px;
-        }
 
-        @media (max-width: 420px) {
-            .category-card__image {
-                width: 100px;
-                margin: 0 28px;
+            &:before {
+                animation: criss-cross-left 0.8s both;
+                animation-direction: alternate;
             }
-        }
-    }
-    @media (max-width: 359px) {
-        $local-padding-y: 24px;
 
-        .category-card__image {
-            width: 132px;
-            margin: 0 26px;
-            padding: $local-padding-y 0;
-            align-self: center;
-
-        }
-        .category-card__content {
-            flex-direction: column;
-        }
-        .category-card__info {
-            padding-top: 0;
-            padding-bottom: $local-padding-y;
-
-            @include direction {
-                #{$padding-inline-start}: 26px;
-                #{$padding-inline-end}: 26px;
+            &:after {
+                animation: criss-cross-right 0.8s both;
+                animation-direction: alternate;
             }
         }
     }
 }
 
+@include media-breakpoint-only(xl) {
+    .category-card__image {
+        width: 120px;
+        margin: 0 26px;
+    }
+}
+@media (max-width: 991px) and (min-width: 475px) {
+    $local-padding-y: 20px;
+
+    .category-card__image {
+        width: 132px;
+        margin: 0 26px;
+        padding: $local-padding-y 0;
+        align-self: center;
+    }
+    .category-card__content {
+        flex-direction: column;
+    }
+    .category-card__info {
+        padding-top: 0;
+        padding-bottom: $local-padding-y;
+
+        @include direction {
+            #{$padding-inline-start}: 26px;
+            #{$padding-inline-end}: 26px;
+        }
+    }
+}
+@media (max-width: 474px) and (min-width: 360px) {
+    .category-card__image {
+        width: 132px;
+    }
+
+    @media (max-width: 420px) {
+        .category-card__image {
+            width: 100px;
+            margin: 0 28px;
+        }
+    }
+}
+@media (max-width: 359px) {
+    $local-padding-y: 24px;
+
+    .category-card__image {
+        width: 132px;
+        margin: 0 26px;
+        padding: $local-padding-y 0;
+        align-self: center;
+    }
+    .category-card__content {
+        flex-direction: column;
+    }
+    .category-card__info {
+        padding-top: 0;
+        padding-bottom: $local-padding-y;
+
+        @include direction {
+            #{$padding-inline-start}: 26px;
+            #{$padding-inline-end}: 26px;
+        }
+    }
+}
 
 .category-card--layout--overlay {
     .category-card__body {
@@ -196,7 +228,7 @@
         &:before {
             position: absolute;
             display: block;
-            content: '';
+            content: "";
             left: 0;
             right: 0;
             top: 0;
@@ -204,7 +236,7 @@
             background-color: $category-card-overlay-color;
             background-image: $category-card-overlay-gradient;
             z-index: -1;
-            transition: background-color .2s;
+            transition: background-color 0.2s;
         }
     }
 
@@ -216,7 +248,7 @@
         right: -10px;
         top: -10px;
         bottom: -10px;
-        transition: transform .3s ease-out;
+        transition: transform 0.3s ease-out;
 
         img {
             width: 100%;
@@ -227,9 +259,7 @@
     .category-card__overlay-image--blur {
         z-index: -2;
         opacity: 0;
-        transition:
-            transform .3s ease-out,
-            opacity .3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 
         img {
             filter: blur(3px);
@@ -256,7 +286,7 @@
 
         a {
             color: inherit;
-            transition: color .12s;
+            transition: color 0.12s;
         }
         a:hover {
             color: $category-card-overlay-link-hover-color;
@@ -294,7 +324,6 @@
             background-color: $category-card-hover-overlay-bg-color;
         }
     }
-
 
     @include media-breakpoint-down(sm) {
         .category-card__body {

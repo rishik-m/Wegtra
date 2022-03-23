@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable indent */
 /* eslint-disable react/jsx-indent-props */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // react
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // third-party
 import { FormattedMessage, useIntl } from 'react-intl';
 import classNames from 'classnames';
@@ -53,6 +55,7 @@ export function Search() {
 
     const searchCancelFnRef = useRef(() => {});
     const rootRef = useRef<HTMLDivElement>(null);
+    const [buttonText, setButtonText] = useState('Select City');
 
     const search = (value: string) => {
         searchCancelFnRef.current();
@@ -178,13 +181,17 @@ export function Search() {
         ? intl.formatMessage({ id: 'INPUT_SEARCH_PLACEHOLDER_VEHICLE' }, { ...currentVehicle })
         : intl.formatMessage({ id: 'INPUT_SEARCH_PLACEHOLDER' });
 
+    useEffect(() => {
+        setButtonText(buttonText);
+    }, [buttonText]);
+
     return (
         <div className="search" ref={rootRef} onBlur={handleRootBlur}>
             <form className="search__body">
                 <div className="search__shadow" />
 
                 <label className="sr-only" htmlFor="site-search">
-                    <FormattedMessage id="INPUT_SEARCH_LABEL" />
+                    {buttonText}
                 </label>
 
                 <input
@@ -260,7 +267,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                         </g>
                     </svg>
                     <span className="search__button-title">
-                        <FormattedMessage id="BUTTON_SEARCH_SELECT_VEHICLE_DESKTOP" />
+                        {buttonText}
                     </span>
                 </button>
 
@@ -363,7 +370,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                             <div className="row">
                                 <div className="col-md-3">
                                     <div className="vehicle-picker__text" style={{ marginTop: '20px' }}>
-                                        <FormattedMessage id="TEXT_SELECT_VEHICLE_TO_FIND_EXACT_FIT_PARTS" />
+                                        <FormattedMessage id="BUTTON_SEARCH_SELECT_VEHICLE_DESKTOP" />
                                     </div>
                                 </div>
 
@@ -384,9 +391,9 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                         </div>
 
                         <div className="page_wrapper" style={{ maxWidth: '900px' }}>
-                            <div className="container">
+                            <div>
                                 <div className="row">
-                                    <div className="col-md-3">
+                                    <div className="col-md-3" onClick={() => setButtonText('Bangalore')}>
                                         <svg
                                             version="1.0"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -424,7 +431,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Bangalore </span>
+                                        <div onClick={() => { setButtonText('Bangalore'); }}> Bangalore </div>
                                     </div>
                                     <div className="col-md-3">
                                         <svg
@@ -464,7 +471,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Chennai </span>
+                                        <div onClick={() => { setButtonText('Chennai'); }}> Chennai </div>
                                     </div>
                                     <div className="col-md-3">
                                         <svg
@@ -504,7 +511,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Pune </span>
+                                        <div onClick={() => { setButtonText('Chennai'); }}> Chennai </div>
                                     </div>
                                     <div className="col-md-3">
                                         <svg
@@ -544,14 +551,14 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Noida </span>
+                                        <div onClick={() => { setButtonText('Bangalore'); }}> Bangalore </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="page_wrapper" style={{ maxWidth: '900px' }}>
-                            <div className="container">
+                            <div>
                                 <div className="row">
                                     <div className="col-md-3">
                                         <svg
@@ -591,7 +598,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Hyderabad </span>
+                                        <div onClick={() => { setButtonText('Hyderabad'); }}> Hyderabad </div>
                                     </div>
                                     <div className="col-md-3">
                                         <svg
@@ -631,7 +638,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Lucknow </span>
+                                        <div onClick={() => { setButtonText('Lucknow'); }}> Lucknow </div>
                                     </div>
                                     <div className="col-md-3">
                                         <svg
@@ -671,7 +678,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Jaipur </span>
+                                        <div onClick={() => { setButtonText('Mumbai'); }}> Mumbai </div>
                                     </div>
                                     <div className="col-md-3">
                                         <svg
@@ -711,7 +718,7 @@ c-23 15 -27 15 -50 0 l-25 -16 0 -380 0 -380 -60 0 -60 0 0 343 c0 372 -2 387
                                                 />
                                             </g>
                                         </svg>
-                                        <span> Kochi </span>
+                                        <div onClick={() => setButtonText('Kolkata')}> Kolkata </div>
                                     </div>
                                 </div>
                             </div>

@@ -75,7 +75,36 @@ $local-border-radius: 3px;
 }
 .block-banners__item-button {
     margin-top: 28px;
+    color: white !important;
     background-color: black !important;
+    border-radius: 80px;
+    transition: all 0.3s ease-out;
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 1px solid #cccccc;
+        background-color: white;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: #00838d;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(2);
+        transform-origin: 50% 50%;
+        transition: transform 0.15s ease-out;
+    }
+
+    &:hover:before {
+        transform: scale(2.15);
+    }
 }
 .block-banners__item-image {
     border-radius: $local-border-radius;
