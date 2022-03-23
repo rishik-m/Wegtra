@@ -1,7 +1,10 @@
+/* eslint-disable import/no-duplicates */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // react
 import React, { PropsWithChildren } from 'react';
 // third-party
-import Link, { LinkProps } from 'next/link';
+import Link from 'next/link';
+import LinkProps from 'next/link';
 import { ParsedUrlQuery, ParsedUrlQueryInput } from 'querystring';
 import {
     format as formatUrl,
