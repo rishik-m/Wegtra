@@ -4,7 +4,7 @@
 // react
 import React, { PropsWithChildren } from 'react';
 // third-party
-import Link, { LinkProps } from 'next/link';
+import LinkProps from 'next/link';
 import { ParsedUrlQuery, ParsedUrlQueryInput } from 'querystring';
 import {
     format as formatUrl,
@@ -13,6 +13,7 @@ import {
     UrlObject,
 } from 'url';
 // application
+import Link from 'next/link';
 import { baseUrl } from '~/services/utils';
 
 export type IAppLinkHref = string | LinkProps;
